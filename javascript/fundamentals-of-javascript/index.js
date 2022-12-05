@@ -1,13 +1,16 @@
-function positiveSum(arr) {
-	let result = arr
-		.map((item, index) => (item > 0 ? index : 0))
-		// .reduce((sum, current) => sum + current)
-console.log(result)
+class SmallestIntegerFinder {
+	findSmallestInt(args) {
+		let min = args[0]
+
+		args.forEach((elem, index) => {
+			if (elem < min) {
+					min = elem
+			}
+		})
+		return min
+	}
 }
 
-positiveSum([-1,2,3,4,-5])
-positiveSum([1, 2, 3, 4, 5])
-positiveSum([1,-2,3,4,5])
 // const myCity = {
 // 	country: 'RUSSIA'
 // }
